@@ -85,6 +85,7 @@ class MakeSparseOp : public OpKernel {
                 // are considered larger than higher-index elements in case of
                 // ties.
                 filter.push(std::make_pair(x(r, c), -c));
+                x_sparse(r, c) = T();
 
             }
 

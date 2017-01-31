@@ -95,7 +95,7 @@ class MakeSparseGradOp : public OpKernel {
                 filter.push(std::make_pair(x(r, c), -c));
 
                 // Initialize output to zero
-                // x_sparse(r, c) = 0;
+                grad_of_inp(r, c) = T();
             }
 
             for (auto top_k_it = filter.unsorted_begin();
